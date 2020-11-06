@@ -20,9 +20,15 @@ int main(int argc, char* argv[])
         player = (player%2)? 1: 2;
         playerSymbol = (player == 1)?chrArry[TEN]:
                                         chrArry[LEVEN];
+
+        cout << "\n\n\t\t  **Q to Exit**" << endl;
         cout << "\n\t\tPlayer " << player << " choice: ";
         cin >> choice;
-        choice = board.enforceChoice(choice,player, board);
+        if(choice == 'Q' ||  choice == 'q')
+        {
+            cout << "\n\tThank you for playing with us!!!" << endl << endl;
+            return 0;
+        }
         board.move(choice,playerSymbol,player,board);
         win = board.win();
 

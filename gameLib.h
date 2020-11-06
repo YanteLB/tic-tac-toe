@@ -22,6 +22,11 @@ bool isValidChoice(char &choice)
     {
         return false;
     }
+
+    if(choice == 'Q' || choice == 'q')
+    {
+        return true;
+    }
     
     for(int i = 0; i< 9; i++)//char c: chrArry2)
     {
